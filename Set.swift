@@ -9,11 +9,19 @@ var stringSet: Set = ["One", "Two", "Three"]
 for num in stringSet {
     print(num)
 }
+// Output
+// One
+// Three
+// Two
 
 //Ordered iteration
 for num in stringSet.sorted() {
     print(num)
 }
+// Output
+// One
+// Three
+// Two
 
 //Check if the element exists
 if stringSet.contains("One") {
@@ -21,11 +29,15 @@ if stringSet.contains("One") {
 } else {
     print("Element not found")
 }
+// Output
+// Element found
 
 //Adding an Element
 //Insert a new element
 stringSet.insert("Four")
 print(stringSet)
+// Output
+// ["Three", "Two", "One", "Four"]
 
 //Removing Elements
 //remove(_:) - To remove an element when you have an instance of it
@@ -52,21 +64,29 @@ stringSet.removeAll()
 let A: Set = [1, 3, 5, 7]
 let B: Set = [0, 2, 4, 6]
 print(A.union(B))
+// Output
+// [3, 7, 4, 6, 2, 1, 5, 0]
 
 //Intersection
 let C: Set = [1, 2, 3, 4, 5]
 let D: Set = [0, 2, 4, 6, 8]
 print(C.intersection(D))
+// Output
+// [2, 4]
 
 //Subtracting
 var E: Set = [1, 3, 5, 7, 9]
 let F: Set = [0, 3, 7, 6, 8]
 print(E.subtracting(F))
+// Output
+// [5, 9, 1]
 
 //Symmetric difference
 var G: Set = [1, 2, 3, 4, 5]
 var H: Set = [0, 2, 4, 6, 8]
 print(G.symmetricDifference(H))
+// Output
+// [1, 3, 8, 5, 0, 6]
 
 //Membership and Equality Operations
 //Set Equality
@@ -83,6 +103,9 @@ if I == K {
 } else {
     print("I and K are different")
 }
+// Output
+// I and J are different
+// I and K are equal
 
 //Set Membership
 //isSubset(of:) - Use this method to determine if all of the values of a set are contained in a specified set.
@@ -96,3 +119,8 @@ print("isSubset:", L.isSubset(of: M))
 print("isSuperset:", M.isSuperset(of: L))
 print("isStrictSubset:", L.isStrictSubset(of: M))
 print("isDisjointWith:", L.isDisjoint(with: M))
+// Output
+// isSubset: true
+// isSuperset: true
+// isStrictSubset: true
+// isDisjointWith: false

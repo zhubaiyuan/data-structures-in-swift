@@ -27,15 +27,26 @@ customStack.push(element: 8)
 print(customStack)
 customStack.push(element: 12)
 print(customStack)
+// Output
+// [4]
+// [4, 8]
+// [4, 8, 12]
 
 //Using peek method
 print(customStack.peek()!)
+// Output
+// 12
 
 //Using pop method
 var x = customStack.pop()
 print(x!)
+// Output
+// 12
+
 x = customStack.pop()
 print(x!)
+// Output
+// 8
 
 //Stack Extensions
 extension Stack: CustomStringConvertible {
